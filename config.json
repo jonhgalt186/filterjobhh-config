@@ -1,1 +1,26 @@
-config.json
+{
+  "ZOMBIE_VACANCY_ID_DELTA": 5000000,
+  "STALE_MONTH_VACANCY_ID_DELTA": 1666667,
+  "AGENCY_NAME_MARKERS":[
+    "агентство", "консалтинг", "решения", "персонал", "staff", "hr",
+    "подбор", "consult", "рекрутинг", "стаффинг", "партнер", "partner",
+    "аутсорс", "аутстафф", "outsourc", "outstaff", "кадров",
+    "agency", "recruitment", "recruiting", "personnel", "headhunt", "human resources"
+  ],
+  "AGENCY_WHITELIST":[
+    "яндекс", "сбер", "vk", "тинькофф"
+  ],
+  "SELECTORS": {
+    "CARD": "[data-qa*=\"vacancy-serp__vacancy\"],[data-qa=\"branded-snippet-vacancy\"],[class*=\"vacancy-card\"], .serp-item",
+    "SALARY": "[data-qa=\"vacancy-serp__vacancy-compensation\"], .vacancy-serp__vacancy-compensation",
+    "LOCATION": "[data-qa=\"vacancy-serp__vacancy-address\"], .vacancy-serp__vacancy-address",
+    "EMPLOYER": "[data-qa*=\"employer\"], a[href*=\"/employer/\"], a[href*=\"/company/\"]",
+    "TITLE": "[data-qa=\"serp-item__title\"],[data-qa*=\"vacancy-title\"], a[href*=\"/vacancy/\"], h2",
+    "TITLE_OR_HEADING": "[data-qa=\"serp-item__title\"], h2",
+    "TITLE_LINK": "[data-qa=\"serp-item__title\"], a[href*=\"/vacancy/\"]",
+    "MAIN_VACANCY_LINK": "a[href*=\"/vacancy/\"]",
+    "RATING": "[data-qa*=\"rating-value\"],[data-qa*=\"employer-rating\"]",
+    "RATING_VALUE_FALLBACK": ".company-review-rating-value",
+    "RESULTS_CONTAINER": "[data-qa=\"vacancy-serp__results\"], #a11y-main-content"
+  }
+}
